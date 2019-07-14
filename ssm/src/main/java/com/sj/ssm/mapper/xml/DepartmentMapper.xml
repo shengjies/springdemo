@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sj.ssm.mapper.DepartmentMapper">
+    <resultMap id="selectDepartmentResult" type="com.sj.ssm.domain.Department">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <!--查询所以部门信息-->
+    <select id="selectDepartmentAll" resultMap="selectDepartmentResult">
+        SELECT * FROM ssm_department;
+    </select>
+</mapper>
